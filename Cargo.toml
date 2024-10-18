@@ -1,0 +1,22 @@
+[package]
+name = "matchmaking-server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+axum = { version = "0.7", features = ["ws"] }
+tracing = "0.1"
+tracing-subscriber = {version = "0.3", features = ["env-filter"] }
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "any", "postgres", "uuid", "time"] }
+serde = "1.0"
+serde_json = "1.0"
+dotenvy = "0.15"
+bcrypt = "0.15"
+jsonwebtoken = "8.0"
+uuid = { version = "1", features = ["v4"] }
+async-trait = "0.1"
+axum-extra = { version = "0.9", features = ["typed-header"] }
+tokio-tungstenite = "*"
+futures-util = "0.3"
+reqwest = { version = "0.12", features = ["json"] }
